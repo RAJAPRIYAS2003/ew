@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+        <div >
+            <nav class="navbar">
+                <div class="navcontainer" id="navcontainer" >
+                    <div class="logo">
+                        <img src="images/logo-1.jpeg" alt="">
+                        <h3>Games</h3>
+                    </div>
+                    <ul>
+                        <li><a href="#home-container">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#play-games">Play Games</a></li>
+                        <li><a href="#download-games">Download Games</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <i class="fa-solid fa-bars" id="menubtn" class="menubtn"></i>
+        </div>
+        <section id="home-container">
+            <div class="home-component">
+                 <h1>Free Online Games</h1>
+                 <p class="text">On Crazy Games</p>
+                 <a href="">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     PLAY NOW
+                 </a>
+            </div>
+         </section>
+    </header>
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <div class="about-left">
+                    <video  controls autoplay id="video">
+                        <source src="video/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="about-right">
+                    <h3>About</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat necessitatibus provident, aliquid molestias nulla maiores dignissimos dolorem eveniet, doloribus molestiae repellat praesentium, in non natus error quod voluptatum nobis? Quisquam rem cupiditate atque? Quidem possimus optio temporibus, harum provident cumque placeat repudiandae illo accusantium tenetur adipisci ex, odio quisquam minus.
+                    </p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto quisquam fugit earum consequuntur vitae ex, ipsum beatae, ipsam debitis similique atque sed minima cupiditate nulla! Dolores commodi iure eaque.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto  iure eaque.</p>
+                    <br>
+                    <button>Read More</button>
+                </div>
+            </div>
+
+        </section>
+        <section id="play-games">
+            <h3>Play Free Games</h3>
+                <div id="cardContainer">
+                   
+                </div>
+        </section>
+        <section id="download-games">
+            <h3>Free Download Games</h3>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="container">
+                        <div class="card">
+                            <img src="images/c-1.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-2.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-3.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="card">
+                            <img src="images/c-4.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-5.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-6.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="card">
+                            <img src="images/c-7.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-8.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/c-9.jpg" alt="">
+                            <div class="card-info">
+                                <a href="">Download Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev-btn">Prev</button>
+                <button class="next-btn">Next</button>
+            </div>
+
+        </section>
+        <section id="easy-game">
+            <h3>Play Now</h3>
+            <div class="easy">
+                <div class="easy-left">
+                    <h4>PUZZLE-GAME</h4>
+                    <div id="puzzle-container"></div>
+                    <button onclick="shuffle()">Shuffle</button>
+                </div>
+                <div class="easy-right">
+                    <h4>Tic Tac Toe-Game</h4>
+                    <div class="board">
+                        <div class="cell" onclick="makeMove(0)"></div>
+                        <div class="cell" onclick="makeMove(1)"></div>
+                        <div class="cell" onclick="makeMove(2)"></div>
+                        <div class="cell" onclick="makeMove(3)"></div>
+                        <div class="cell" onclick="makeMove(4)"></div>
+                        <div class="cell" onclick="makeMove(5)"></div>
+                        <div class="cell" onclick="makeMove(6)"></div>
+                        <div class="cell" onclick="makeMove(7)"></div>
+                        <div class="cell" onclick="makeMove(8)"></div>
+                    </div>
+                    <p id="message"></p>
+                    <button onclick="resetGame()">Reset Game</button>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+            <div class="con-container">
+                <div class="con-left">
+                    <div class="top">
+                        <video autoplay loop muted id="video1">
+                            <source src="video/about.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="bottom">
+                        <img src="images/contact-1.jpg" alt="">
+                        <img src="images/contact-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="con-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            
+        </section>
+       
+    </main>
+    <footer>
+        <p class="foot">&copy;Designed By Rajapriya 2024</p>
+    </footer>
+    
+
+
+<script src="main.js"></script>
+</body>
+</html>
